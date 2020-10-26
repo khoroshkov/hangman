@@ -7,6 +7,7 @@ import Word from "./components/Word";
 import Notification from "./components/Notification";
 import PopupWindow from "./components/PopupWindow";
 import { showNotification as show } from "./helpers/helpers";
+import KeyBoard from "./components/KeyBoard";
 
 const words = ["application", "programming", "interface", "wizard"];
 let selectedWord = words[Math.floor(Math.random() * words.length)];
@@ -55,15 +56,33 @@ function App() {
     selectedWord = words[random];
   }
 
-  return (
+  const handleClick = (e) => {
+    const letter = e.target.textContent.toLowerCase();
 
-    <div className='wrapper'>
+    if (selectedWord.includes(letter)) {
+      if (!correctLetters.includes(letter)) {
+        setCorrectLetters((currentLetters) => [...currentLetters, letter]);
+      } else {
+        show(setshowNotification);
+      }
+    } else {
+      if (!wrongLetters.includes(letter)) {
+        setWrongLetters((wrongLetters) => [...wrongLetters, letter]);
+      } else {
+        show(setshowNotification);
+      }
+    }
+  };
+
+  return (
+    <div className="wrapper">
       <div className="witch"></div>
       <Header />
       <div className="game-container">
         <Figure wrongLetters={wrongLetters} />
         <WrongLetters wrongLetters={wrongLetters} />
         <Word selectedWord={selectedWord} correctLetters={correctLetters} />
+        <KeyBoard handleClick={handleClick} />
       </div>
       <PopupWindow
         correctLetters={correctLetters}
@@ -73,7 +92,6 @@ function App() {
         playAgain={playAgain}
       />
       <Notification showNotification={showNotification} />
-
     </div>
   );
 }
