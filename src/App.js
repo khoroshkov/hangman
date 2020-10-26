@@ -9,7 +9,35 @@ import PopupWindow from "./components/PopupWindow";
 import { showNotification as show } from "./helpers/helpers";
 import KeyBoard from "./components/KeyBoard";
 
-const words = ["application", "programming", "interface", "wizard"];
+const words = [
+  "maxx",
+  "detochka",
+  "steckel",
+  "atlanta",
+  "odin",
+  "sparky",
+  "gizmo",
+  "kyle",
+  "jake",
+  "preston",
+  "photography",
+  "kvitochka",
+  "leshik",
+  "toyota",
+  "runningmaxx",
+  "magicmaxx",
+  "jakejake",
+  "metallica",
+  "blade",
+  "lionking",
+  "iseeyou",
+  "tracy",
+  "stake",
+  "spiders",
+  "usa",
+  "ukraine",
+  "smile",
+];
 let selectedWord = words[Math.floor(Math.random() * words.length)];
 
 function App() {

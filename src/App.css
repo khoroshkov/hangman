@@ -67,7 +67,7 @@ h1 {
   height: 40px;
   position: absolute;
   z-index: -1;
-  top: 50%;
+  top: 40%;
   transform: translateY(-70%);
   background-position: center;
   background-size: contain;
