@@ -1,7 +1,7 @@
 import React from "react";
 
 const Figure = ({ wrongLetters }) => {
-  const errors = wrongLetters.length;
+  let errors = wrongLetters.length;
 
   return (
     <svg height="250" width="200" className="figure-container">
@@ -10,7 +10,7 @@ const Figure = ({ wrongLetters }) => {
       <line x1="60" y1="20" x2="60" y2="230" />
       <line x1="20" y1="230" x2="100" y2="230" />
 
-      {errors > 0 && <circle cx="140" cy="70" r="20" />}
+      {errors > 0 && <circle cx="140" cy="70" r="16" />}
 
       {errors > 1 && <line x1="140" y1="90" x2="140" y2="150" />}
 

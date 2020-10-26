@@ -114,7 +114,7 @@ const Header = () => {
           </svg>
         </span>
       </h1>
-      <p>Find the hidden word - Enter a letter</p>
+      <p className="game-text">Find the hidden word - Enter a letter</p>
     </>
   );
 };

@@ -15,7 +15,11 @@ body {
 }
 
 .wrapper {
-  overflow: hidden;
+  /* overflow: hidden; */
+}
+
+.game-text {
+  margin-bottom: 0;
 }
 
 h1 {
@@ -73,7 +77,7 @@ h1 {
 @keyframes move {
   20%, 100% {
     opacity: 0;
-    transform: translate(350px, 0);
+    transform: translate(300px, 0);
   }
   0% {
     opacity: 0;
@@ -100,7 +104,7 @@ h1 {
 }
 
 .game-container {
-  padding: 30px 10px;
+  padding: 10px 10px;
   position: relative;
   margin: auto;
   height: 100%;
@@ -115,7 +119,7 @@ h1 {
 .figure-container {
   fill: transparent;
   stroke: #fff;
-  stroke-width: 4px;
+  stroke-width: 3px;
   stroke-linecap: round;
 }
 
@@ -124,18 +128,18 @@ h1 {
 }
 
 .wrong-letters-container {
-  
   display: flex;
-  flex-direction: column;
-  
+  flex-direction: column;  
 }
 
 .wrong-letters-container p {
-  margin: 0 0 5px;
+  color: red;
+  text-align: center;
+  /* margin: 0 0 5px; */
 }
 
 .wrong-letters-container span {
-  font-size: 24px;
+  font-size: 20px;
 }
 
 .word {
@@ -147,8 +151,8 @@ h1 {
 .letter {
   border-bottom: 3px solid #2980b9;
   display: inline-flex;
-  font-size: 30px;
-  align-items: center;
+  font-size: 24px;
+  align-items: flex-end;
   justify-content: center;
   margin: 0 3px;
   height: 50px;
@@ -169,13 +173,13 @@ h1 {
 }
 
 .popup {
-  background: #2980b9;
+  background: #001;
   border-radius: 5px;
   box-shadow: 0 15px 10px 3px rgba(0, 0, 0, 0.1);
   padding: 20px;
   text-align: center;
   width: 75%;
-  margin: 0 auto;
+  /* margin: 0 auto; */
   position: relative;
 }
 
