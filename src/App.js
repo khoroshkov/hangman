@@ -37,6 +37,7 @@ const words = [
   "usa",
   "ukraine",
   "smile",
+  "coffe",
 ];
 let selectedWord = words[Math.floor(Math.random() * words.length)];
 

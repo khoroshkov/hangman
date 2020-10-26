@@ -13,11 +13,11 @@ const PopupWindow = ({
   let playable = true;
 
   if (checkWin(correctLetters, wrongLetters, selectedWord) === "win") {
-    finalMessage = "Cogratulations! You won! :)";
+    finalMessage = "Congratulations! You won! :)";
     playable = false;
   } else if (checkWin(correctLetters, wrongLetters, selectedWord) === "lose") {
     finalMessage = "Unfortunately you lost :(";
-    finalMessageRevealWord = `... the world was: ${selectedWord}`;
+    finalMessageRevealWord = `... the word was: ${selectedWord}`;
     playable = false;
   }
 
